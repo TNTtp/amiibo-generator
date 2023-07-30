@@ -1,15 +1,12 @@
----
-feature_name: REPLACE_ME
-chrome_version: REPLACE_ME
-feature_id: REPLACE_ME
-additional_head_content: <meta name="optional" value="optional">
----
-
-
-{% include output_helper.html initial_output_content=initial_output_content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% include output_helper.html initial_output_content=initial_output_content %}
+    <script>
+    log = ChromeSamples.log;
+        if (!("NDEFReader" in window))
+        ChromeSamples.setStatus("Web NFC is not available. Use Chrome on Android.");
+    </script>
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -100,11 +97,5 @@ additional_head_content: <meta name="optional" value="optional">
 </html>
 </html>
 
-<script>
-log = ChromeSamples.log;
-
-if (!("NDEFReader" in window))
-  ChromeSamples.setStatus("Web NFC is not available. Use Chrome on Android.");
-</script>
 
 
