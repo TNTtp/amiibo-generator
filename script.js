@@ -1,4 +1,4 @@
-Document.write("ghz")
+document.write("ghz");
 (function() {
     var keysLoaded = false;
     var amiiboDatabase = null;
