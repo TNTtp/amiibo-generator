@@ -113,6 +113,8 @@ function closeModal(modal) {
         $('#dataTable tbody').on('click', 'tr', function() {
             var data = oTable.row( this ).data();
             downloadBin($(data[1]).text(), $(data[2]).text());
+            const modal = document.getElementById('modal')
+            openModal(modal)
         });
 
         $('#input').keyup(function() {
