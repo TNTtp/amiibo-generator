@@ -1,4 +1,4 @@
-document.write("ghz");
+
 (function() {
     var keysLoaded = false;
     var amiiboDatabase = null;
@@ -85,6 +85,7 @@ document.write("ghz");
         $('#dataTable tbody').on('click', 'tr', function() {
             var data = oTable.row( this ).data();
             downloadBin($(data[1]).text(), $(data[2]).text());
+            document.write("Trying to write"+ $(data[1]).text() + "to card");
         });
 
         $('#input').keyup(function() {
