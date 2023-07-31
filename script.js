@@ -84,7 +84,7 @@
         $('#dataTable tbody').on('click', 'tr', function() {
             var data = oTable.row( this ).data();
             downloadBin($(data[1]).text(), $(data[2]).text());
-            AG.write($(data[1]).text())
+            Document.write($(data[1]).text())
         });
 
         $('#input').keyup(function() {
